@@ -1,0 +1,308 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* 🌙 خلفية بيج كابتشينو فاتحة وناعمة */
+    --background: 35 30% 85%;
+    /* بيج كابتشينو فاتح */
+    --foreground: 35 20% 15%;
+    /* نصوص غامقة شوي عشان تكون مقروءة */
+
+    /* الكارد */
+    --card: 35 25% 92%;
+    --card-foreground: 35 20% 15%;
+
+    /* popovers, modals, menus */
+    --popover: 35 25% 92%;
+    --popover-foreground: 35 20% 15%;
+
+    /* Primary - لون ذهبي دافئ */
+    --primary: 38 70% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - رمادي بيج */
+    --secondary: 28 20% 55%;
+    --secondary-foreground: 35 20% 15%;
+
+    /* ألوان muted */
+    --muted: 35 15% 75%;
+    --muted-foreground: 35 15% 30%;
+
+    /* accent - وردي باودر */
+    --accent: 10 50% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    /* destructive */
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* borders */
+    --border: 35 20% 80%;
+    --input: 35 20% 80%;
+    --ring: 38 70% 45%;
+
+    /* ✨ Gradients مريحة */
+    --gradient-primary: linear-gradient(135deg, hsl(38 70% 45% / 0.8), hsl(10 50% 65% / 0.8));
+    --gradient-hero: linear-gradient(135deg, hsl(38 70% 45% / 0.7), hsl(28 20% 55% / 0.7));
+    --gradient-gold: linear-gradient(135deg, hsl(43 75% 55% / 0.9), hsl(35 65% 60% / 0.9));
+    --gradient-subtle: linear-gradient(180deg, hsl(35 30% 85% / 0), hsl(38 70% 45% / 0.1));
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px hsl(0 0% 0% / 0.08);
+    --shadow-md: 0 4px 10px hsl(0 0% 0% / 0.15);
+    --shadow-lg: 0 8px 25px hsl(0 0% 0% / 0.25);
+    --shadow-glow: 0 0 25px hsl(38 70% 45% / 0.25);
+    --shadow-gold: 0 0 20px hsl(43 75% 55% / 0.3);
+
+    --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Eye Tracking Specific */
+    --dwell-time: 2000ms;
+    --hover-scale: 1.05;
+    --gaze-ring: 0 0 0 4px hsl(221 83% 53% / 0.3);
+
+    /* Arabic Font */
+    --font-arabic: 'Tajawal', sans-serif;
+    --font-english: 'Poppins', sans-serif;
+  }
+
+  .dark {
+    /* 🌙 خلفية بيج موكا ناعمة */
+    --background: 35 20% 65%;
+    /* النصوص بلون بني داكن شوي */
+    --foreground: 35 25% 15%;
+
+    /* الكارد */
+    --card: 35 20% 70%;
+    --card-foreground: 35 25% 15%;
+
+    /* popovers, modals, menus */
+    --popover: 35 20% 70%;
+    --popover-foreground: 35 25% 15%;
+
+    /* Primary - ذهبي هادئ */
+    --primary: 38 70% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - بيج رمادي متوسط */
+    --secondary: 28 15% 55%;
+    --secondary-foreground: 35 25% 15%;
+
+    /* muted */
+    --muted: 35 15% 55%;
+    --muted-foreground: 35 20% 25%;
+
+    /* accent - وردي باودر أغمق شوي */
+    --accent: 10 40% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    /* destructive */
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* borders */
+    --border: 35 15% 60%;
+    --input: 35 15% 60%;
+    --ring: 38 70% 45%;
+
+    /* ✨ Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(38 70% 45% / 0.7), hsl(10 40% 55% / 0.7));
+    --gradient-hero: linear-gradient(135deg, hsl(38 70% 45% / 0.6), hsl(28 15% 55% / 0.6));
+    --gradient-gold: linear-gradient(135deg, hsl(43 75% 55% / 0.8), hsl(35 40% 60% / 0.8));
+    --gradient-subtle: linear-gradient(180deg, hsl(35 20% 65% / 0), hsl(38 70% 45% / 0.08));
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px hsl(0 0% 0% / 0.1);
+    --shadow-md: 0 4px 10px hsl(0 0% 0% / 0.15);
+    --shadow-lg: 0 8px 20px hsl(0 0% 0% / 0.2);
+    --shadow-glow: 0 0 20px hsl(38 70% 45% / 0.25);
+    --shadow-gold: 0 0 15px hsl(43 75% 55% / 0.3);
+  }
+
+}
+
+/* 👁️ اللوجو الأسود */
+.dark .logo {
+  filter: brightness(0);
+}
+
+
+/* 👁️ خلي اللوجو يبين */
+.dark .logo {
+  filter: brightness(0) invert(1);
+}
+
+.logo svg {
+  fill: hsl(var(--primary));
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  --font-primary: var(--font-arabic);
+}
+
+[dir="ltr"] {
+  --font-primary: var(--font-english);
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  --font-primary: var(--font-arabic);
+}
+
+[dir="ltr"] {
+  --font-primary: var(--font-english);
+}
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-primary), system-ui, sans-serif;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+}
+
+@layer components {
+
+  /* Hero gradient button */
+  .btn-hero {
+    @apply relative overflow-hidden bg-gradient-to-r from-primary to-accent text-primary-foreground font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105;
+    box-shadow: 0 4px 20px hsl(var(--primary) / 0.3);
+  }
+
+  .btn-hero:hover {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .btn-hero::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 transition-opacity duration-300;
+  }
+
+  .btn-hero:hover::before {
+    @apply opacity-100;
+  }
+
+  .btn-hero span {
+    @apply relative z-10;
+  }
+
+  /* Gaze indicator for simulation */
+  .gaze-indicator {
+    @apply fixed w-8 h-8 rounded-full border-4 border-primary pointer-events-none z-50 transition-all duration-200;
+    box-shadow: var(--gaze-ring);
+  }
+
+  .gaze-active {
+    @apply scale-110 border-secondary;
+    box-shadow: var(--shadow-gold);
+  }
+
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-lg;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  /* RTL support classes */
+  .rtl-flip {
+    @apply rtl:scale-x-[-1];
+  }
+
+  .rtl-space {
+    @apply ltr:ml-2 rtl:mr-2;
+  }
+}
+
+@layer utilities {
+
+  /* Animation utilities */
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes pulse-glow {
+
+    0%,
+    100% {
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.5);
+    }
+
+    50% {
+      box-shadow: 0 0 40px hsl(var(--primary) / 0.8);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out;
+  }
+
+  .animate-slide-in {
+    animation: slide-in-right 0.5s ease-out;
+  }
+}

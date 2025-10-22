@@ -1,0 +1,13 @@
+venv/ 
+__pycache__/ 
+*.pyc 
+*.pyd 
+*.dll 
+*.so 
+*.dylib 
+*.log 
+*.env
+venv/ 
+*.env.example
+__pycache__/ 
+*.json
