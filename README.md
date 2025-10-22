@@ -1,7 +1,31 @@
-# Eyecan-pro
-Eyecan: Eye-tracking web simulator for communication via smart glasses, enabling users with speech or movement impairments to express themselves naturally and independently.
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-تخيّل ان عينك صارت وسيلتك للتواصل!
-اسم Eyecan بجمع بين Eye أي العين و Can أي القدرة، ليعكس فكرة مبتكرة: القدرة على التعبير عن نفسك وفهم العالم من حولك فقط بحركة العين.
+Eye-tracking web simulator for communication via smart glasses, enabling users with speech or movement impairments to express themselves naturally and independently.
+
+تخيّل أن عينيك أصبحت وسيلتك للتواصل!
+
+اسم Eyecan يجمع بين Eye أي العين و Can أي القدرة، ليعكس فكرة مبتكرة: القدرة على التعبير عن نفسك وفهم العالم من حولك فقط بحركة العين (مش مجرد اسم مشروع).
 
 هذا المشروع يتيح للأشخاص الذين فقدوا القدرة على الكلام أو الحركة أن يتواصلوا بحرية واستقلالية باستخدام نظارات ذكية، ليكون كل نظرة رسالة، وكل حركة عين بداية حوار. تجربة تفاعلية، سلسة، وواقعية تفتح نافذة جديدة للتواصل الإنساني، حتى في أصعب الظروف.
+
+ليست مجرد نظارة، بل جسر حقيقي يُعيد الصلة بين الإنسان والعالم من حوله. نؤمن بأن التكنولوجيا يجب أن تخدم الإنسانية، وأن كل شخص يستحق أن يُسمع صوته ويعبر عن مشاعره.                                    How to Run the Project / كيفية تشغيل المشروع
+
+تشغيل Backend (الخلفية)
+
+cd backend
+pip install -r requirements.txt
+python app.py
+
+
+تشغيل Frontend (الواجهة)
+
+cd frontend
+npm install
+npm run dev
+
+
+⚠️ ملاحظات مهمة:
+
+تأكد أن المسار (path) إلى المشروع صحيح على جهازك.
+
+إذا واجهت أي اختلاف في المسارات أو الباس، قم بتعديله ليتوافق مع جهازك.
+
+افتح تيرمينال واحد للـBackend وآخر للـFrontend لتعمل كل الوظائف بسلاسة.
